@@ -35,6 +35,12 @@ const Navbar = () => {
             </div>
 
             <nav className="navbar">
+                <div className="logo-container">
+                    <a href='/home'>
+                        <img id="logo" src="https://farmtohome.com.my/image/farmtohome/image/data/Farm-to-Home-Delivery-logo.jpg" alt="Logo" />
+                    </a>
+                </div>
+
                 <ul className="nav-links">
                     <li><a href="/">Home</a></li>
                     <li
@@ -82,13 +88,6 @@ const Navbar = () => {
                     <li><a href="/gallery">About Us</a></li>
                     <li><a href="/contact">Contact Us</a></li>
                 </ul>
-
-                <div className="logo">
-                    <a href='/home'>
-                    <img src="https://farmtohome.com.my/image/farmtohome/image/data/Farm-to-Home-Delivery-logo.jpg" alt="Logo" width="auto" height="52px" />
-                    </a>
-                </div>
-                
 
                 <div className="nav-icons">
                     <a href="/search" className="icon-link">

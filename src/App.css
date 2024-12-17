@@ -8,45 +8,66 @@
 } */
 
 
+/* Navigation Bar */
+.logo-container {
+  margin-left: 5%;
+}
+
+#logo {
+  width: auto;
+  height: 52px;
+}
 
 .top-bar {
   height: 0px;
   background-color: rgb(14, 214, 7);
   display: flex;
-  align-items: center; /* Aligns items vertically in the center */
-  justify-content: space-between; /* Spaces out the elements */
-  padding: 10px 20px; /* Adds some padding */
+  align-items: center;
+  /* Aligns items vertically in the center */
+  justify-content: space-between;
+  /* Spaces out the elements */
+  padding: 10px 20px;
+  /* Adds some padding */
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .email-phone {
   display: flex;
-  align-items: center; /* Aligns items vertically in the center */
+  align-items: center;
+  /* Aligns items vertically in the center */
 }
 
 .contact-info {
   font-size: 12px;
   display: flex;
-  align-items: center; /* Align icons and text vertically */
-  gap: 5px; /* Space between the icon and text */
-  margin-right: 20px; /* Adds spacing between contact info elements */
-  color: black; /* Set the text color */
-  text-decoration: none; /* Remove underline */
+  align-items: center;
+  /* Align icons and text vertically */
+  gap: 5px;
+  /* Space between the icon and text */
+  margin-right: 20px;
+  /* Adds spacing between contact info elements */
+  color: black;
+  /* Set the text color */
+  text-decoration: none;
+  /* Remove underline */
 }
 
 .social-icons {
   size: 1px;
   display: flex;
-  gap: 15px; /* Space between social media icons */
+  gap: 15px;
+  /* Space between social media icons */
 }
 
 .social-icons a svg {
   font-size: 15px;
-  color: black; /* Set the actual icon color to black */
+  color: black;
+  /* Set the actual icon color to black */
 }
 
 .social-icons a svg:hover {
-  color: gray; /* Optional: Change color on hover */
+  color: gray;
+  /* Optional: Change color on hover */
 }
 
 .social-icons a {
@@ -62,22 +83,23 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* This will push the logo to the left and the links to the center */
-  border: 2px solid red;
-  
+  justify-content: space-between;
 }
 
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 0; /* Set gap to 0 because we'll handle spacing with padding */
+  gap: 0;
+  /* Set gap to 0 because we'll handle spacing with padding */
   padding-left: 0;
 }
 
 .nav-links li {
-  position: relative; /* Needed for better control of borders */
-  padding: 0 15px; /* Add horizontal padding for spacing */
+  position: relative;
+  /* Needed for better control of borders */
+  padding: 0 15px;
+  /* Add horizontal padding for spacing */
 }
 
 .nav-links li:not(:last-child)::after {
@@ -87,31 +109,41 @@
   top: 0;
   height: 100%;
   width: 1px;
-  background-color: rgba(28, 36, 75, 1); /* Vertical line color */
+  background-color: rgba(28, 36, 75, 1);
+  /* Vertical line color */
 }
 
 .nav-links li a {
   color: rgba(28, 36, 75, 1);
   text-decoration: none;
   font-size: 18px;
-  position: relative; /* Needed for positioning the pseudo-element */
-  padding-bottom: 5px; /* Creates space between the link and the underline */
+  position: relative;
+  /* Needed for positioning the pseudo-element */
+  padding-bottom: 5px;
+  /* Creates space between the link and the underline */
 }
 
 .nav-links li a::after {
   content: '';
   position: absolute;
-  bottom: 0; /* Aligns the line at the bottom of the padding */
-  left: 50%; /* Start the line from the center */
+  bottom: 0;
+  /* Aligns the line at the bottom of the padding */
+  left: 50%;
+  /* Start the line from the center */
   width: 0;
-  height: 2px; /* Thickness of the underline */
-  transform: translateX(-50%); /* Center the line */
-  background-color: rgba(28, 36, 75, 1); /* Color of the underline */
-  transition: width 0.3s ease; /* Smooth transition effect */
+  height: 2px;
+  /* Thickness of the underline */
+  transform: translateX(-50%);
+  /* Center the line */
+  background-color: rgba(28, 36, 75, 1);
+  /* Color of the underline */
+  transition: width 0.3s ease;
+  /* Smooth transition effect */
 }
 
 .nav-links li a:hover::after {
-  width: 100%; /* Expands the line to full width on hover */
+  width: 100%;
+  /* Expands the line to full width on hover */
 }
 
 .nav-icons {
@@ -127,7 +159,8 @@
 }
 
 .icon-link:hover {
-  color: gray; /* Change color on hover */
+  color: gray;
+  /* Change color on hover */
 }
 
 /* Adjust the size of the icons if needed */
@@ -138,20 +171,23 @@
 
 .dropdown {
   position: absolute;
-  top: 100%; /* Position below the parent link */
+  top: 100%;
+  /* Position below the parent link */
   left: 0;
   background-color: white;
   border: 1px solid #ddd;
   list-style: none;
   padding: 10px 0;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 10; /* Ensure it appears above other content */
+  z-index: 10;
+  /* Ensure it appears above other content */
 }
 
 /* Dropdown items */
 .dropdown li {
   padding: 10px 20px;
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap;
+  /* Prevent text from wrapping */
 }
 
 
@@ -160,19 +196,26 @@
   text-decoration: none;
   color: rgba(28, 36, 75, 1);
   display: block;
-  transition: background-color 0.5s ease; /* Smooth transition for background color */
+  transition: background-color 0.5s ease;
+  /* Smooth transition for background color */
 }
 
 .dropdown li a::after {
   content: '';
   position: absolute;
-  bottom: 0; /* Aligns the line at the bottom of the padding */
-  left: 50%; /* Start the line from the center */
+  bottom: 0;
+  /* Aligns the line at the bottom of the padding */
+  left: 50%;
+  /* Start the line from the center */
   width: 0;
-  height: 2px; /* Thickness of the underline */
-  transform: translateX(-50%); /* Center the line */
-  background-color: rgba(28, 36, 75, 1); /* Color of the underline */
-  transition: width 0.5s ease; /* Smooth transition effect */
+  height: 2px;
+  /* Thickness of the underline */
+  transform: translateX(-50%);
+  /* Center the line */
+  background-color: rgba(28, 36, 75, 1);
+  /* Color of the underline */
+  transition: width 0.5s ease;
+  /* Smooth transition effect */
 }
 
 /* Hover effect for dropdown items */
@@ -180,3 +223,62 @@
   background-color: #f0f0f0;
 }
 
+/* Navigation Bar */
+
+/* Home Content */
+.banner-container {
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  /* Make container full width */
+}
+
+.banner-image {
+  width: 90vw;
+  /* 100% of the viewport width */
+  height: 400px;
+  object-fit: cover;
+  /* Ensure the image covers the area of the container */
+}
+
+.left-arrow,
+.right-arrow {
+  color: white;
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.circle-container {
+  margin-top: 10px;
+}
+
+.circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.circle.active {
+  background-color: #333;
+}
+
+/* Home Content */
