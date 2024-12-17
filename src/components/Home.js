@@ -41,17 +41,18 @@ const Home = () => {
                 <div className="right-arrow" onClick={nextImage}>
                     <FontAwesomeIcon icon={faChevronRight} size="2x" />
                 </div>
-            </div>
-            <div className="circle-container">
-                {images.map((_, index) => (
-                    <div
-                        key={index}
-                        className={`circle ${currentIndex === index ? 'active' : ''}`}
-                        onClick={() => goToImage(index)}
-                    ></div>
-                ))}
+                <div className="circle-container">
+                    {images.map((_, index) => (
+                        <div
+                            key={index}
+                            className={`circle ${currentIndex === index ? 'active' : ''}`}
+                            onClick={() => goToImage(index)}
+                        ></div>
+                    ))}
+                </div>
             </div>
         </div>
+
     );
 };
 

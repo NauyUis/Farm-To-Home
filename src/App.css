@@ -231,18 +231,15 @@
 }
 
 .image-container {
-  position: relative;
+  position: relative; /* Ensure the circle container is positioned relative to the image container */
   display: inline-block;
   width: 90%;
-  /* Make container full width */
 }
 
 .banner-image {
   width: 90vw;
-  /* 100% of the viewport width */
   height: 400px;
   object-fit: cover;
-  /* Ensure the image covers the area of the container */
 }
 
 .left-arrow,
@@ -264,7 +261,11 @@
 }
 
 .circle-container {
-  margin-top: 10px;
+  position: absolute;
+  bottom: 10px; /* Adjust the distance from the bottom of the image */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 10;
 }
 
 .circle {
@@ -280,5 +281,6 @@
 .circle.active {
   background-color: #333;
 }
+
 
 /* Home Content */
