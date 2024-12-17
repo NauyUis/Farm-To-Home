@@ -1,0 +1,182 @@
+/* body{
+  background-image: url('https://farmtohome.com.my/image/farmtohome/image/cache/data/FTHD%20Main%20Page%201-700x431.png');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  margin: 0; 
+  height: 100vh; 
+} */
+
+
+
+.top-bar {
+  height: 0px;
+  background-color: rgb(14, 214, 7);
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: space-between; /* Spaces out the elements */
+  padding: 10px 20px; /* Adds some padding */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.email-phone {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+}
+
+.contact-info {
+  font-size: 12px;
+  display: flex;
+  align-items: center; /* Align icons and text vertically */
+  gap: 5px; /* Space between the icon and text */
+  margin-right: 20px; /* Adds spacing between contact info elements */
+  color: black; /* Set the text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.social-icons {
+  size: 1px;
+  display: flex;
+  gap: 15px; /* Space between social media icons */
+}
+
+.social-icons a svg {
+  font-size: 15px;
+  color: black; /* Set the actual icon color to black */
+}
+
+.social-icons a svg:hover {
+  color: gray; /* Optional: Change color on hover */
+}
+
+.social-icons a {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This will push the logo to the left and the links to the center */
+  border: 2px solid red;
+  
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0; /* Set gap to 0 because we'll handle spacing with padding */
+  padding-left: 0;
+}
+
+.nav-links li {
+  position: relative; /* Needed for better control of borders */
+  padding: 0 15px; /* Add horizontal padding for spacing */
+}
+
+.nav-links li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(28, 36, 75, 1); /* Vertical line color */
+}
+
+.nav-links li a {
+  color: rgba(28, 36, 75, 1);
+  text-decoration: none;
+  font-size: 18px;
+  position: relative; /* Needed for positioning the pseudo-element */
+  padding-bottom: 5px; /* Creates space between the link and the underline */
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Aligns the line at the bottom of the padding */
+  left: 50%; /* Start the line from the center */
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  transform: translateX(-50%); /* Center the line */
+  background-color: rgba(28, 36, 75, 1); /* Color of the underline */
+  transition: width 0.3s ease; /* Smooth transition effect */
+}
+
+.nav-links li a:hover::after {
+  width: 100%; /* Expands the line to full width on hover */
+}
+
+.nav-icons {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.icon-link {
+  color: rgba(28, 36, 75, 1);
+  text-decoration: none;
+}
+
+.icon-link:hover {
+  color: gray; /* Change color on hover */
+}
+
+/* Adjust the size of the icons if needed */
+.nav-icons a svg {
+  font-size: 22px;
+}
+
+
+.dropdown {
+  position: absolute;
+  top: 100%; /* Position below the parent link */
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 10px 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Ensure it appears above other content */
+}
+
+/* Dropdown items */
+.dropdown li {
+  padding: 10px 20px;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+/* Dropdown links */
+.dropdown li a {
+  text-decoration: none;
+  color: rgba(28, 36, 75, 1);
+  display: block;
+  transition: background-color 0.5s ease; /* Smooth transition for background color */
+}
+
+.dropdown li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Aligns the line at the bottom of the padding */
+  left: 50%; /* Start the line from the center */
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  transform: translateX(-50%); /* Center the line */
+  background-color: rgba(28, 36, 75, 1); /* Color of the underline */
+  transition: width 0.5s ease; /* Smooth transition effect */
+}
+
+/* Hover effect for dropdown items */
+.dropdown li a:hover {
+  background-color: #f0f0f0;
+}
+
