@@ -146,6 +146,7 @@
   /* Expands the line to full width on hover */
 }
 
+/* Nav Icons Container */
 .nav-icons {
   display: flex;
   gap: 40px;
@@ -153,20 +154,28 @@
   padding: 10px 15px;
 }
 
-.icon-link {
+/* Icon Buttons */
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
   color: rgba(28, 36, 75, 1);
-  text-decoration: none;
+  padding: 0;
+  font-size: 18px; /* Reduce the font size for smaller icons */
+  display: inline-flex;
+  align-items: center;
 }
 
-.icon-link:hover {
-  color: gray;
-  /* Change color on hover */
-}
 
-/* Adjust the size of the icons if needed */
-.nav-icons a svg {
+.icon-button svg {
   font-size: 22px;
 }
+
+/* Hover Effect */
+.icon-button:hover {
+  color: gray; /* Change color on hover */
+}
+
 
 
 .dropdown {
@@ -223,6 +232,67 @@
   background-color: #f0f0f0;
 }
 
+/* Dropdown Styles */
+.dropdown {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  display: block;
+}
+
+.dropdown li {
+  padding: 10px;
+  list-style: none;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+/* Search Overlay Styles */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.search-box {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.search-btn,
+.cancel-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+
+
+
 /* Navigation Bar */
 
 /* Home Content */
@@ -238,11 +308,7 @@
 
 .banner-image {
   width: 90vw;
-<<<<<<< HEAD
   height: 500px;
-=======
-  height: 400px;
->>>>>>> fb74fcc3a0f571c1c5424b501344fe47d72b464e
   object-fit: cover;
 }
 

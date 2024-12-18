@@ -53,11 +53,6 @@ const Home = () => {
                 </div>
             </div>
         </div>
-
-<<<<<<< HEAD
-
-=======
->>>>>>> fb74fcc3a0f571c1c5424b501344fe47d72b464e
     );
 };
 

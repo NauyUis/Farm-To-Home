@@ -6,6 +6,8 @@ import { faEnvelope, faPhone, faSearch, faShoppingCart, faUserCircle } from '@fo
 const Navbar = () => {
     const [showProductsDropdown, setShowProductsDropdown] = useState(false);
     const [showCustomerDropdown, setShowCustomerDropdown] = useState(false);
+    const [showSearch, setShowSearch] = useState(false);
+
 
     return (
         <header>
@@ -90,17 +92,28 @@ const Navbar = () => {
                 </ul>
 
                 <div className="nav-icons">
-                    <a href="/search" className="icon-link">
+                    <button className="icon-button" onClick={() => setShowSearch(true)}>
                         <FontAwesomeIcon icon={faSearch} size="2x" />
-                    </a>
-                    <a href="/cart" className="icon-link">
+                    </button>
+                    <button className="icon-button" onClick={() => window.location.href = '/cart'}>
                         <FontAwesomeIcon icon={faShoppingCart} size="2x" />
-                    </a>
-                    <a href="/profile" className="icon-link">
+                    </button>
+                    <button className="icon-button" onClick={() => window.location.href = '/profile'}>
                         <FontAwesomeIcon icon={faUserCircle} size="2x" />
-                    </a>
+                    </button>
+
                 </div>
             </nav>
+
+            {showSearch && (
+                <div className="search-overlay">
+                    <div className="search-box">
+                        <input type="text" placeholder="Search..." />
+                        <button className="search-btn">Search</button>
+                        <button className="cancel-btn" onClick={() => setShowSearch(false)}>Cancel</button>
+                    </div>
+                </div>
+            )}
         </header>
     );
 }
