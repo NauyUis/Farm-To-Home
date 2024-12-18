@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebook, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhone, faSearch, faShoppingCart, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faEnvelope, faPhone, faSearch, faShoppingCart, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     const [showProductsDropdown, setShowProductsDropdown] = useState(false);
     const [showCustomerDropdown, setShowCustomerDropdown] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
+    const [showLinks, setShowLinks] = useState(false);
+    
+
 
     const handleSearchChange = (e) => {
         setSearchQuery(e.target.value);
@@ -48,7 +51,11 @@ const Navbar = () => {
                     </a>
                 </div>
 
-                <ul className="nav-links">
+                <div className="burger-menu" onClick={() => setShowLinks(!showLinks)}>
+                    <FontAwesomeIcon icon={faBars} size="2x" />
+                </div>
+
+                <ul className={`nav-links ${showLinks ? 'active' : ''}`}>
                     <li><a href="/">Home</a></li>
                     <li
                         onMouseEnter={() => setShowProductsDropdown(true)}

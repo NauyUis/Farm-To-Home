@@ -9,6 +9,7 @@
 }
 
 .top-bar {
+  width: 100%;
   height: 0px;
   background-color: rgb(14, 214, 7);
   display: flex;
@@ -22,7 +23,7 @@
 }
 
 .email-phone {
-  display: flex;
+display: flex;
   align-items: center;
   /* Aligns items vertically in the center */
 }
@@ -307,7 +308,7 @@
   /* Use full width of the parent */
   background: transparent;
   outline: none;
-  font-size: 16px;
+  font-size: 2vw;
   color: white;
   border-bottom: 2px solid #28a745;
   padding-right: 40px;
@@ -337,7 +338,7 @@
 .button-group {
   display: flex;
   gap: 5vw;
-  margin-top: 3vh;
+  margin-top: 5vh;
   justify-content: center;
 }
 
@@ -356,6 +357,59 @@
 .cancel-btn:hover, .search-btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-
-
 /* Navigation Bar */
+
+/* By default, hide the burger menu and nav links on larger screens */
+.burger-menu {
+  display: none;
+}
+
+@media (max-width: 1124px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+  }
+
+  .burger-menu {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .burger-menu svg {
+    color: black; /* Color for the hamburger icon */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: left;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .nav-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+
+
+
