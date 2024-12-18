@@ -1,0 +1,65 @@
+
+/* Home Content */
+.banner-container {
+  text-align: center;
+}
+
+.image-container {
+  position: relative; /* Ensure the circle container is positioned relative to the image container */
+  display: inline-block;
+  width: 90%;
+}
+
+.banner-image {
+  width: 90vw;
+  height: 500px;
+  object-fit: cover;
+}
+
+.left-arrow,
+.right-arrow {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  color: rgb(255, 255, 255);
+}
+
+.circle-container {
+  position: absolute;
+  bottom: 10px; /* Adjust the distance from the bottom of the image */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 10;
+}
+
+.circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.circle.active {
+  background-color: #333;
+}
+
+
+/* Home Content */
