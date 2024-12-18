@@ -238,7 +238,11 @@
 
 .banner-image {
   width: 90vw;
+<<<<<<< HEAD
   height: 500px;
+=======
+  height: 400px;
+>>>>>>> fb74fcc3a0f571c1c5424b501344fe47d72b464e
   object-fit: cover;
 }
 
@@ -286,5 +290,6 @@
 .circle.active {
   background-color: #333;
 }
+
 
 /* Home Content */
