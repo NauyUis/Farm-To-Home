@@ -238,13 +238,13 @@
 
 .banner-image {
   width: 90vw;
-  height: 400px;
+  height: 500px;
   object-fit: cover;
 }
 
 .left-arrow,
 .right-arrow {
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   position: absolute;
   top: 50%;
   font-size: 20px;
@@ -258,6 +258,11 @@
 
 .right-arrow {
   right: 10px;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  color: rgb(255, 255, 255);
 }
 
 .circle-container {
