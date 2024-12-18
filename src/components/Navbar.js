@@ -111,8 +111,8 @@ const Navbar = () => {
             </nav>
 
             {showSearch && (
-                <div className="search-overlay">
-                    <div className="search-container">
+                <div className="search-overlay" onClick={() => setShowSearch(false)}>
+                    <div className="search-container" onClick={(e) => e.stopPropagation()}>
                         <div className='search-box'>
                             <input
                                 type="text"
