@@ -7,6 +7,11 @@ const Navbar = () => {
     const [showProductsDropdown, setShowProductsDropdown] = useState(false);
     const [showCustomerDropdown, setShowCustomerDropdown] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const handleSearchChange = (e) => {
+        setSearchQuery(e.target.value);
+    };
 
 
     return (
@@ -107,13 +112,30 @@ const Navbar = () => {
 
             {showSearch && (
                 <div className="search-overlay">
-                    <div className="search-box">
-                        <input type="text" placeholder="Search..." />
-                        <button className="search-btn">Search</button>
-                        <button className="cancel-btn" onClick={() => setShowSearch(false)}>Cancel</button>
+                    <div className="search-container">
+                        <div className='search-box'>
+                            <input
+                                type="text"
+                                value={searchQuery}
+                                onChange={handleSearchChange}
+                                placeholder="Search for products..."
+                            />
+                            <button className="search-icon-button">
+                                <FontAwesomeIcon icon={faSearch} size="lg" />
+                            </button>
+                        </div>
+                        <div className="button-group">
+                            <button className="cancel-btn" onClick={() => setShowSearch(false)}>
+                                Cancel
+                            </button>
+                            <button className="search-btn">
+                                Search
+                            </button>
+                        </div>
                     </div>
                 </div>
             )}
+
         </header>
     );
 }
