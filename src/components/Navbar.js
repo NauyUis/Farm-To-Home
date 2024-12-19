@@ -9,7 +9,7 @@ const Navbar = () => {
     const [showSearch, setShowSearch] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [showLinks, setShowLinks] = useState(false);
-    
+
 
 
     const handleSearchChange = (e) => {
@@ -45,14 +45,15 @@ const Navbar = () => {
             </div>
 
             <nav className="navbar">
+
+                <button className="burger-menu" onClick={() => setShowLinks(!showLinks)}>
+                    <FontAwesomeIcon icon={faBars} size="2x" />
+                </button>
+
                 <div className="logo-container">
                     <a href='/home'>
                         <img id="logo" src="https://farmtohome.com.my/image/farmtohome/image/data/Farm-to-Home-Delivery-logo.jpg" alt="Logo" />
                     </a>
-                </div>
-
-                <div className="burger-menu" onClick={() => setShowLinks(!showLinks)}>
-                    <FontAwesomeIcon icon={faBars} size="2x" />
                 </div>
 
                 <ul className={`nav-links ${showLinks ? 'active' : ''}`}>
@@ -64,9 +65,9 @@ const Navbar = () => {
                         <a href="/classes">Products</a>
                         {showProductsDropdown && (
                             <ul className="dropdown">
-                                <li><a href="/products/product1">Product 1</a></li>
-                                <li><a href="/products/product2">Product 2</a></li>
-                                <li><a href="/products/product3">Product 3</a></li>
+                                <li><a href="/products/product1">CNY Special</a></li>
+                                <li><a href="/products/product2">Monthly Package</a></li>
+                                <li><a href="/products/product3">Prepaid Store-Credit</a></li>
                                 <li><a href="/products/product4">Product 4</a></li>
                                 <li><a href="/products/product5">Product 5</a></li>
                                 <li><a href="/products/product6">Product 6</a></li>

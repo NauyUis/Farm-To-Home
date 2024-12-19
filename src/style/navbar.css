@@ -14,40 +14,31 @@
   background-color: rgb(14, 214, 7);
   display: flex;
   align-items: center;
-  /* Aligns items vertically in the center */
   justify-content: space-between;
-  /* Spaces out the elements */
   padding: 10px 20px;
-  /* Adds some padding */
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .email-phone {
-display: flex;
+  display: flex;
   align-items: center;
-  /* Aligns items vertically in the center */
 }
 
 .contact-info {
   font-size: 12px;
   display: flex;
   align-items: center;
-  /* Align icons and text vertically */
   gap: 5px;
-  /* Space between the icon and text */
   margin-right: 20px;
-  /* Adds spacing between contact info elements */
   color: black;
-  /* Set the text color */
   text-decoration: none;
-  /* Remove underline */
 }
 
 .social-icons {
   size: 1px;
   display: flex;
   gap: 15px;
-  /* Space between social media icons */
+  padding-right: 40px;
 }
 
 .social-icons a svg {
@@ -86,14 +77,14 @@ display: flex;
   padding-left: 0;
 }
 
-.nav-links li {
+.nav-links>li {
   position: relative;
   /* Needed for better control of borders */
   padding: 0 15px;
   /* Add horizontal padding for spacing */
 }
 
-.nav-links li:not(:last-child)::after {
+.nav-links>li:not(:last-child)::after {
   content: '';
   position: absolute;
   right: 0;
@@ -104,17 +95,17 @@ display: flex;
   /* Vertical line color */
 }
 
-.nav-links li a {
+.nav-links>li a {
   color: rgba(28, 36, 75, 1);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.4vw;
   position: relative;
   /* Needed for positioning the pseudo-element */
   padding-bottom: 5px;
   /* Creates space between the link and the underline */
 }
 
-.nav-links li a::after {
+.nav-links>li>a::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -132,7 +123,7 @@ display: flex;
   /* Smooth transition effect */
 }
 
-.nav-links li a:hover::after {
+.nav-links>li>a:hover::after {
   width: 100%;
   /* Expands the line to full width on hover */
 }
@@ -174,79 +165,53 @@ display: flex;
 .dropdown {
   position: absolute;
   top: 100%;
-  /* Position below the parent link */
   left: 0;
   background-color: white;
   border: 1px solid #ddd;
   list-style: none;
-  padding: 10px 0;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  /* Ensure it appears above other content */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  padding: 0;
 }
 
 /* Dropdown items */
 .dropdown li {
-  padding: 10px 20px;
+  padding: 10px 10px;
   white-space: nowrap;
   /* Prevent text from wrapping */
+  text-decoration: none;
+  color: black;
+  list-style: none;
 }
 
-
-/* Dropdown links */
 .dropdown li a {
+  position: relative;
+  font-size: 1.2vw;
   text-decoration: none;
   color: rgba(28, 36, 75, 1);
   display: block;
   transition: background-color 0.5s ease;
-  /* Smooth transition for background color */
+}
+
+.dropdown li a:hover {
+  background-color: #f0f0f0;
 }
 
 .dropdown li a::after {
   content: '';
   position: absolute;
   bottom: 0;
-  /* Aligns the line at the bottom of the padding */
   left: 50%;
-  /* Start the line from the center */
   width: 0;
-  height: 2px;
-  /* Thickness of the underline */
+  height: 1px;
   transform: translateX(-50%);
-  /* Center the line */
   background-color: rgba(28, 36, 75, 1);
-  /* Color of the underline */
   transition: width 0.5s ease;
-  /* Smooth transition effect */
 }
 
 /* Hover effect for dropdown items */
-.dropdown li a:hover {
-  background-color: #f0f0f0;
-}
-
-/* Dropdown Styles */
-.dropdown {
-  position: absolute;
-  background-color: white;
-  border: 1px solid #ccc;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 100;
-  display: block;
-}
-
-.dropdown li {
-  padding: 10px;
-  list-style: none;
-}
-
-.dropdown a {
-  text-decoration: none;
-  color: black;
-}
-
-.nav-links li {
-  position: relative;
+.dropdown li a:hover::after {
+  width: 100%;
 }
 
 /* Search Overlay Styles */
@@ -354,9 +319,11 @@ display: flex;
   cursor: pointer;
 }
 
-.cancel-btn:hover, .search-btn:hover {
+.cancel-btn:hover,
+.search-btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
 /* Navigation Bar */
 
 /* By default, hide the burger menu and nav links on larger screens */
@@ -364,52 +331,72 @@ display: flex;
   display: none;
 }
 
-@media (max-width: 1124px) {
+@media (max-width: 995px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
     position: relative;
     width: 100%;
+    border: 2px solid yellow;
+  }
+
+  .logo-container {
+    position: absolute;
+    right: 50%;
   }
 
   .burger-menu {
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 10px 15px;
     background: none;
     border: none;
     cursor: pointer;
   }
 
   .burger-menu svg {
-    color: black; /* Color for the hamburger icon */
+    color: black;
+    /* Color for the hamburger icon */
   }
 
   .nav-links {
+    margin-top: 0;
+    border: 2px solid red;
     display: none;
     flex-direction: column;
     width: 100%;
-    padding: 10px 0;
+    padding: 0 0;
   }
 
   .nav-links.active {
     display: flex;
   }
 
-  .nav-links li {
+  .nav-links>li {
     text-align: left;
     padding: 10px 20px;
-    width: 100%;
+    width: 90%;
+    border: 2px solid rgb(3, 223, 252)
+  }
+
+  .nav-links>li a {
+    font-size: 17px;
   }
 
   .nav-icons {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 0;
   }
+
+  .dropdown {
+    padding: 0 0;
+    border: 2px solid red;
+  }
+
+  .dropdown li a {
+    font-size: 1.4vw;
+  }
+
 }
-
-
-
-
