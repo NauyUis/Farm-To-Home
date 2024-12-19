@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 10px 0px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -25,11 +25,11 @@
 }
 
 .contact-info {
-  font-size: 12px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-right: 20px;
+  margin-left: 3vw;
   color: black;
   text-decoration: none;
 }
@@ -38,7 +38,7 @@
   size: 1px;
   display: flex;
   gap: 15px;
-  padding-right: 40px;
+  padding-right: 2vw;
 }
 
 .social-icons a svg {
@@ -331,13 +331,13 @@
   display: none;
 }
 
+
 @media (max-width: 995px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
     position: relative;
     width: 100%;
-    border: 2px solid yellow;
   }
 
   .logo-container {
@@ -362,7 +362,84 @@
 
   .nav-links {
     margin-top: 0;
-    border: 2px solid red;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0;
+  }
+
+  .nav-links>li:not(:last-child)::after {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links>li {
+    text-align: left;
+    padding: 10px 20px;
+    width: 90%;
+  }
+
+  .nav-links>li a {
+    font-size: 17px;
+  }
+
+  .nav-icons {
+    position: absolute;
+    top: 5px;
+    right: 0;
+  }
+
+  .dropdown {
+    padding: 0 0;
+  }
+
+  .dropdown li a {
+    font-size: 1.4vw;
+  }
+
+  .contact-info {
+    font-size: 10px;
+  }
+
+  .social-icons a svg {
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+  }
+
+  .logo-container {
+    position: absolute;
+    left: 10%;
+  }
+
+  .burger-menu {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .burger-menu svg {
+    color: black;
+    /* Color for the hamburger icon */
+  }
+
+  .nav-links {
+    margin-top: 0;
     display: none;
     flex-direction: column;
     width: 100%;
@@ -375,13 +452,13 @@
 
   .nav-links>li {
     text-align: left;
-    padding: 10px 20px;
+    padding: 0.8vw 0.8vw;
     width: 90%;
     border: 2px solid rgb(3, 223, 252)
   }
 
   .nav-links>li a {
-    font-size: 17px;
+    font-size: 0.8rem;
   }
 
   .nav-icons {
@@ -397,6 +474,24 @@
 
   .dropdown li a {
     font-size: 1.4vw;
+  }
+
+  .contact-info {
+    font-size: 2vw
+  }
+
+  .social-icons {
+    margin-top: -1vw;
+    gap: 2vw;
+  }
+
+  .social-icons a svg {
+    font-size: 3vw
+  }
+
+  .nav-icons {
+    gap: 4vw;
+    padding: 10px 15px;
   }
 
 }

@@ -25,7 +25,7 @@ const Navbar = () => {
                         <FontAwesomeIcon icon={faEnvelope} size="1x" /> info@domain.com
                     </a>
                     <span className="contact-info">
-                        <FontAwesomeIcon icon={faPhone} size="1x" /> +1 234 567 8910
+                        <FontAwesomeIcon icon={faPhone} size="1x" /> +60 19-235 3928
                     </span>
                 </div>
                 <div className="social-icons">
