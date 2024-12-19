@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebook, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faBars, faEnvelope, faPhone, faSearch, faShoppingCart, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faEnvelope, faPhone, faSearch, faShoppingCart, faUserCircle, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     const [showProductsDropdown, setShowProductsDropdown] = useState(false);
@@ -11,9 +11,15 @@ const Navbar = () => {
     const [showLinks, setShowLinks] = useState(false);
 
 
-
     const handleSearchChange = (e) => {
         setSearchQuery(e.target.value);
+    };
+
+    const toggleProductsDropdown = () => {
+        setShowProductsDropdown((prevState) => !prevState);
+    };
+    const toggleCustomerDropdown = () => {
+        setShowCustomerDropdown((prevState) => !prevState);
     };
 
 
@@ -63,6 +69,9 @@ const Navbar = () => {
                         onMouseLeave={() => setShowProductsDropdown(false)}
                     >
                         <a href="/classes">Products</a>
+                        <button className='dropdown-icon' onClick={toggleProductsDropdown}>
+                            <FontAwesomeIcon icon={showProductsDropdown ? faMinus : faPlus} />
+                        </button>
                         {showProductsDropdown && (
                             <ul className="dropdown">
                                 <li><a href="/products/product1">CNY Special</a></li>
@@ -91,6 +100,9 @@ const Navbar = () => {
                         onMouseLeave={() => setShowCustomerDropdown(false)}
                     >
                         <a href="/events">Customer Service</a>
+                        <button className='dropdown-icon' onClick={toggleCustomerDropdown}>
+                            <FontAwesomeIcon icon={showCustomerDropdown ? faMinus : faPlus} />
+                        </button>
                         {showCustomerDropdown && (
                             <ul className="dropdown">
                                 <li><a href="/customer/faq">FAQ</a></li>
