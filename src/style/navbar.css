@@ -397,7 +397,7 @@
     right: 0;
   }
 
-  .nav-links > li {
+  .nav-links>li {
     flex-direction: column;
     align-items: flex-start;
     position: relative;
@@ -414,18 +414,18 @@
     border: none;
     box-shadow: none;
   }
-
+  
   .dropdown-icon {
-    display: block;  /* Ensure it is displayed */
+    display: block;
+    /* Ensure it is displayed */
     position: absolute;
-    right: 1.5rem;
+    right: 5%;
     background: none;
     border: none;
     cursor: pointer;
     font-size: 20px;
   }
 
-  
   .dropdown li a {
     font-size: 15px;
   }
@@ -441,85 +441,20 @@
 }
 
 @media (max-width: 480px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    width: 100%;
-  }
 
   .logo-container {
-    position: absolute;
     left: 10%;
   }
 
-  .burger-menu {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    padding: 10px 15px;
-    background: none;
-    border: none;
-    cursor: pointer;
+  .nav-links>li {
+    width: 90%;
   }
 
-  .burger-menu svg {
-    color: black;
-    /* Color for the hamburger icon */
-  }
-
-  .nav-links {
-    margin-top: 0;
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    padding: 0 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links > li {
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    width: 94.3%;
-  }
-
-  .nav-links>li a {
+  .nav-links > li > a {
     font-size: 0.8rem;
   }
 
-  .nav-icons {
-    position: absolute;
-    top: 5px;
-    right: 0;
-  }
-
-  .dropdown {
-    padding: 0 0;
-    left: 0px;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    width: 100%;
-    border: none;
-    box-shadow: none;
-  }
-
-  .dropdown-icon {
-    display: block;  /* Ensure it is displayed */
-    position: absolute;
-    right: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-  }
-
   .dropdown li a {
-    padding: 0 0;
     font-size: 0.7rem;
   }
 

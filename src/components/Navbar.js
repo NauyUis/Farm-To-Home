@@ -1,15 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebook, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faBars, faEnvelope, faPhone, faSearch, faShoppingCart, faUserCircle, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     const [showProductsDropdown, setShowProductsDropdown] = useState(false);
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 995);
     const [showCustomerDropdown, setShowCustomerDropdown] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [showLinks, setShowLinks] = useState(false);
 
+    useEffect(() => {
+        const handleResize = () => {
+            setIsDesktop(window.innerWidth > 995);
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Initial check
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const handleSearchChange = (e) => {
         setSearchQuery(e.target.value);
@@ -65,8 +76,8 @@ const Navbar = () => {
                 <ul className={`nav-links ${showLinks ? 'active' : ''}`}>
                     <li><a href="/">Home</a></li>
                     <li
-                        onMouseEnter={() => setShowProductsDropdown(true)}
-                        onMouseLeave={() => setShowProductsDropdown(false)}
+                        onMouseEnter={isDesktop ? () => setShowProductsDropdown(true) : null}
+                        onMouseLeave={isDesktop ? () => setShowProductsDropdown(false) : null}
                     >
                         <a href="/classes">Products</a>
                         <button className='dropdown-icon' onClick={toggleProductsDropdown}>
@@ -96,8 +107,8 @@ const Navbar = () => {
                     <li><a href="/pages">My Wishlist</a></li>
                     <li><a href="/about">Login/Register</a></li>
                     <li
-                        onMouseEnter={() => setShowCustomerDropdown(true)}
-                        onMouseLeave={() => setShowCustomerDropdown(false)}
+                        onMouseEnter={isDesktop ? () => setShowCustomerDropdown(true) : null}
+                        onMouseLeave={isDesktop ? () => setShowCustomerDropdown(false) : null}
                     >
                         <a href="/events">Customer Service</a>
                         <button className='dropdown-icon' onClick={toggleCustomerDropdown}>
