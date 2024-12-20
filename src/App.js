@@ -1,13 +1,16 @@
 import './App.css';
 import Navbar from './components/Navbar'
-import Home from './components/Home'
+// import Home from './components/Home'
+import Banner from './components/Banner';
+
 
 function App() {
   return (
     <div className="App">
       <div className="Content">
         <Navbar />
-        <Home />
+        <Banner />
+        {/* <Home /> */}
       </div>
     </div>
   );

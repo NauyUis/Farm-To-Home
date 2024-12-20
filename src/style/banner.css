@@ -1,0 +1,60 @@
+/* Carousel container */
+.carousel-container {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden; /* Hide any overflow */
+}
+
+
+/* Prevent focus outline and border on image container */
+.image-container:focus,
+.image-container:active {
+    outline: none !important;
+    border: none !important;
+}
+
+.image-container{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.carousel-image {
+    padding: 0;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+}
+
+/* Custom arrow container */
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4vw;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 999;
+}
+
+.left-arrow {
+    left: 8%;
+}
+
+.right-arrow {
+    right: 8%;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    color: rgb(101, 252, 0);
+}
+
+@media (max-width: 995px) {
+
+}
