@@ -3,7 +3,8 @@
     width: 100%;
     margin: auto;
     position: relative;
-    overflow: hidden; /* Hide any overflow */
+    overflow: hidden;
+    /* Hide any overflow */
 }
 
 
@@ -14,19 +15,18 @@
     border: none !important;
 }
 
-.image-container{
+.image-container {
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .carousel-image {
     padding: 0;
     width: 100%;
     height: auto;
-    max-height: 600px;
     object-fit: contain;
 }
 
@@ -36,25 +36,60 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 4vw;
+    font-size: clamp(24px, 4vw, 80px);
+    /*(min, prefer, max)*/
     color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
     z-index: 999;
 }
 
 .left-arrow {
-    left: 8%;
+    left: 5%;
 }
 
 .right-arrow {
-    right: 8%;
+    right: 5%;
 }
 
-.left-arrow:hover,
-.right-arrow:hover {
-    color: rgb(101, 252, 0);
+.left-arrow:active,
+.right-arrow:active {
+    color: rgb(0, 0, 0);
 }
 
-@media (max-width: 995px) {
+.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    gap: 1vw !important; 
+    margin: 20px 0px !important;
+    bottom: 0px !important;
+}
 
+.slick-dots li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 !important;
+}
+
+.slick-dots li button:before {
+    font-size: clamp(0px, 3vw, 16px) !important;
+    color: rgba(0, 0, 0, 0.5);
+    /* Set the color */
+    z-index: 1000000 !important;
+}
+
+/* Adjust the active dot color */
+.slick-dots li.slick-active button:before {
+    color: rgba(0, 0, 0, 1);
+    /* Highlight active dot */
+}
+
+@media (max-width: 480px) {
+    .slick-dots{
+        gap: 2vw !important;
+    }
+
+    .slick-dots li button:before {
+        font-size: 4vw !important;
+    }
 }

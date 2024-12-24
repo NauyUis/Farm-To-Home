@@ -1,3 +1,7 @@
+body {
+  height: 10000px;
+}
+
 /* Navigation Bar */
 .logo-container {
   margin-left: 5%;
