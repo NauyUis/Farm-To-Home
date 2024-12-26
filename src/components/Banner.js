@@ -34,6 +34,8 @@ const Banner = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false, // Disable default arrows
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 5000, // Slide change interval in milliseconds
   };
 
   return (
