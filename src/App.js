@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar'
 // import Home from './components/Home'
 import Banner from './components/Banner';
+import CategorySlider from './components/Category';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Navbar />
         <Banner />
         {/* <Home /> */}
+        <CategorySlider />
       </div>
     </div>
   );

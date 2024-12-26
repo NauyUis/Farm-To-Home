@@ -92,6 +92,7 @@ body {
   gap: 0;
   /* Set gap to 0 because we'll handle spacing with padding */
   padding-left: 0;
+  animation: appear 0.5s ease-in-out;
 }
 
 .nav-links>li {
