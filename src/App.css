@@ -4,4 +4,7 @@
 @import './style/category.css';
 
 
+body {
+    height: 10000px;
+}
 
