@@ -2,7 +2,7 @@
 @import './style/home.css';
 @import './style/banner.css';
 @import './style/category.css';
-
+@import './style/collection.css';
 
 body {
     height: 10000px;
