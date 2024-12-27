@@ -27,8 +27,8 @@
     padding: 0;
     width: 100%;
     height: auto;
+    min-width: 100% !important;
     max-height: 400px;
-    object-fit: contain;
 }
 
 /* Custom arrow container */

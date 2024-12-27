@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Banner from './components/Banner';
 import CategorySlider from './components/Category';
 import Collection from './components/Collection';
+import ProductCarousel from './components/ProductCarousel';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         {/* <Home /> */}
         <CategorySlider />
         <Collection />
+        <ProductCarousel />
       </div>
     </div>
   );

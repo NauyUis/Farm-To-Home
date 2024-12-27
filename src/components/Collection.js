@@ -1,17 +1,28 @@
 import React from 'react';
 
 const images = [
-  'https://farmtohome.com.my/image/farmtohome/image/cache/data/Home%20page/4-640x400.png',
-  'https://farmtohome.com.my/image/farmtohome/image/cache/data/Home%20page/5-640x400.png',
-  'https://farmtohome.com.my/image/farmtohome/image/cache/data/Home%20page/3%20b-640x400.png',
+  {
+    src: 'https://farmtohome.com.my/image/farmtohome/image/cache/data/Home%20page/4-640x400.png',
+    link: '/page1',
+  },
+  {
+    src: 'https://farmtohome.com.my/image/farmtohome/image/cache/data/Home%20page/5-640x400.png',
+    link: '/page2',
+  },
+  {
+    src: 'https://farmtohome.com.my/image/farmtohome/image/cache/data/Home%20page/3%20b-640x400.png',
+    link: '/page3',
+  },
 ];
 
 const Collection = () => {
   return (
     <div className="collection-container">
-      {images.map((src, index) => (
+      {images.map((image, index) => (
         <div className="card" key={index}>
-          <img src={src} alt={`Farm ${index + 1}`} />
+          <a href={image.link}>
+            <img src={image.src} alt={`Farm ${index + 1}`} />
+          </a>
         </div>
       ))}
     </div>
