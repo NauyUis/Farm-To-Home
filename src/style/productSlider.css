@@ -1,15 +1,22 @@
 .product-container {
+    margin-top: 2%;
     width: 100%;
     text-align: center;
-    margin: 0 !important;
     padding: 0 !important;
+    position: relative; /* Ensures arrows are positioned relative to this container */
 }
 
 .product-slick-slider .slick-track {
     display: flex;
-    padding: 10px 0;
+    padding: 1% 0;
     gap: 15px;
-    border: 2px solid red;
+}
+
+.product-container h2{
+    font-size: clamp(16px, 4vw, 32px);
+    margin: 0;
+    padding: 10px 0 0 2%;
+    text-align: center;
 }
 
 .product-item:focus,
@@ -142,6 +149,24 @@
     /* Show the add-to-cart button on hover */
 }
 
+.product-left-arrow,
+.product-right-arrow {
+    position: absolute;
+    top: 50%; /* Align arrows vertically to the middle */
+    transform: translateY(-50%); /* Perfect vertical centering */
+    font-size: clamp(24px, 4vw, 80px);
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    z-index: 1000; /* Ensure arrows are above all content */
+}
+
+.product-left-arrow {
+    left: 5%;
+}
+
+.product-right-arrow {
+    right: 5%;
+}
 
 @media (max-width: 995px) {
     .product-item:hover .add-to-cart {
@@ -157,6 +182,10 @@
 }
 
 @media (max-width: 480px) {
+    .product-container h2{
+        padding-top: 5px;
+    }
+    
     .add-to-cart {
         bottom: 30px;
         padding: 5px 10px;
@@ -170,6 +199,7 @@
     }
 
     .product-slick-slider .slick-track {
+        padding: 1% 0;
         gap: 10px;
     }
 }
