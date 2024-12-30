@@ -1,9 +1,4 @@
-body {
-  height: 10000px;
-}
-
 /* Navigation Bar */
-
 @keyframes appear {
   from {
     opacity: 0;
@@ -429,7 +424,6 @@ body {
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-    width: 100%;
     border: none;
     box-shadow: none;
   }

@@ -10,34 +10,62 @@
     gap: 20px;
 }
 
+.product-item:focus,
+.product-item:active {
+    outline: none;
+    border: none;
+}
+
 .product-item {
+    max-height: 240px;
     display: flex !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 !important;
     padding: 0 !important;
-    border: 2px solid green;
-    gap: 0px;
+    border-radius: 8px;
+    border: 2px solid rgba(133, 133, 133, 0.2) !important;
+    border: 2px solid red !important;
 }
 
 .product-item img {
     width: 100%;
-    max-width: 300px;
-    /* Adjust the max width as needed */
+    max-width: 200px;
     height: auto;
-    border-radius: 8px;
-    border: 2px solid red;
+    margin-bottom: 10px;
 }
 
-.product-item h3 {
-    border: 2px solid yellow;
+.product-name {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show ... when text overflows */
+    display: -webkit-box; /* Required for clamping */
+    -webkit-line-clamp: 1; /* Limit text to 2 lines */
+    -webkit-box-orient: vertical; /* Ensure vertical layout */
+    max-width: 90%; /* Prevent stretching the layout */
+    max-height: 1.2rem; /* Ensure text doesn't push other elements */
+    line-height: 1.2rem; /* Maintain clean spacing between lines */
+    text-align: center; /* Keep text centered */
+    word-wrap: break-word; /* Break long words */
+    word-break: break-word; /* Additional safeguard */
+    color: rgba(37, 37, 37, 1);
+    border: 2px solid green;
 }
 
-.product-item p {
-    border: 2px solid yellow;
-    margin: 0;
+.product-price {
+    margin-top: 10px;
     font-size: 1.2rem;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    color: rgba(46, 204, 64, 1);
 }
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 30vw !important;
+    }
+}
+

@@ -28,7 +28,6 @@
     width: 100%;
     height: auto;
     min-width: 100% !important;
-    max-height: 400px;
 }
 
 /* Custom arrow container */
@@ -87,10 +86,10 @@
 
 @media (max-width: 480px) {
     .slick-dots{
-        gap: 2vw !important;
+        gap: 1vw !important;
     }
 
     .slick-dots li button:before {
-        font-size: 4vw !important;
+        font-size: 3vw !important;
     }
 }
