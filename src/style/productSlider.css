@@ -31,8 +31,9 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.product-item:hover{
+.product-item:hover {
     transform: scale(1.05);
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
 }
 
 .product-item img {
@@ -49,27 +50,16 @@
     font-size: 1rem;
     font-weight: 500;
     overflow: hidden;
-    /* Hide overflow */
     text-overflow: ellipsis;
-    /* Show ... when text overflows */
     display: -webkit-box;
-    /* Required for clamping */
     -webkit-line-clamp: 1;
-    /* Limit text to 2 lines */
     -webkit-box-orient: vertical;
-    /* Ensure vertical layout */
     max-width: 90%;
-    /* Prevent stretching the layout */
     max-height: 1.2rem;
-    /* Ensure text doesn't push other elements */
     line-height: 1.2rem;
-    /* Maintain clean spacing between lines */
     text-align: center;
-    /* Keep text centered */
     word-wrap: break-word;
-    /* Break long words */
     word-break: break-word;
-    /* Additional safeguard */
     color: rgba(37, 37, 37, 1);
 }
 
@@ -98,11 +88,87 @@
     color: rgba(46, 204, 64, 1);
 }
 
-@media (max-width: 768px) {
-    
+.product-info {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.product-name,
+.product-price {
+    transition: opacity 0.3s ease;
+}
+
+.add-to-cart {
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    bottom: 20px;
+    padding: 8px 16px;
+    background-color: hsla(0, 0%, 100%, 0);
+    border: 1px solid rgb(1, 187, 42);
+    color: rgb(1, 187, 42);
+    border-radius: 15px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    color: white;
+    background-color: green;
+}
+
+.add-to-cart svg {
+    font-size: 0.6rem;
+    /* Smaller font size */
+}
+
+.product-item:hover .product-name,
+.product-item:hover .product-price {
+    opacity: 0;
+    /* Hide product name and price on hover */
+}
+
+.product-item:hover .add-to-cart {
+    display: flex;
+    /* Show the add-to-cart button on hover */
+}
+
+
+@media (max-width: 995px) {
+    .product-item:hover .add-to-cart {
+        display: none;
+        /* Show the add-to-cart button on hover */
+    }
+
+    .product-item:hover .product-name,
+    .product-item:hover .product-price {
+        opacity: 1;
+        /* Hide product name and price on hover */
+    }
 }
 
 @media (max-width: 480px) {
+    .add-to-cart {
+        bottom: 30px;
+        padding: 5px 10px;
+        font-size: 0.7rem;
+    }
+
+    .product-name,
+    .product-price {
+        font-size: 1rem;
+        /* Adjust product name and price size */
+    }
+
     .product-slick-slider .slick-track {
         gap: 10px;
     }

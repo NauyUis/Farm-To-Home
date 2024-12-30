@@ -2,6 +2,10 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+
+
 
 const ProductCarousel = () => {
     const settings = {
@@ -59,8 +63,13 @@ const ProductCarousel = () => {
                 {products.map((product) => (
                     <div key={product.id} className="product-item">
                         <img src={product.image} alt={product.name} />
-                        <p className='product-name'>{product.name}</p>
-                        <p className='product-price'>RM{product.price}</p>
+
+                        <div className="product-info">
+                            <p className="product-name">{product.name}</p>
+                            <p className="product-price">RM{product.price}</p>
+                        </div>
+
+                        <button className="add-to-cart"><FontAwesomeIcon icon={faShoppingCart} size="2x" />Add to Cart</button>
                     </div>
                 ))}
             </Slider>
