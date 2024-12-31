@@ -44,7 +44,7 @@
     align-items: center;
 }
 
-.FTH-StoreCredit > a{
+.FTH-StoreCredit>a {
     overflow: hidden;
 }
 
@@ -69,6 +69,40 @@
     height: 15px;
     font-size: clamp(8px, 1vw, 30px);
     text-align: center;
+}
+
+.small-banner {
+    width: 100%;
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://farmtohome.com.my/image/farmtohome/image/cache/data/Home%20page/login%205-1920x500.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.small-banner h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.small-banner p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.login-register-btn {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #38b000;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 @media (max-width: 995px) {

@@ -4,7 +4,7 @@ const images = [
     {
         src: 'https://farmtohome.com.my/image/farmtohome/image/cache/data/Home%20page/FTH%20club-750x350.png',
         link: '/page1',
-        heading:'The FTH Club',
+        heading: 'The FTH Club',
         description: 'Become a Farm To Home member and get discounts on your purchase.',
     },
     {
@@ -30,6 +30,11 @@ const MemberAndStoreCredit = () => {
                         <p>{image.description}</p>
                     </div>
                 ))}
+            </div>
+            <div className="small-banner">
+                <h1>FRESH VEGGIES DELIVERED BY FARM TO HOME</h1>
+                <p>Buy vegetables online, at the comfort of your own home.</p>
+                <button className="login-register-btn">LOGIN/REGISTER</button>
             </div>
         </div>
     );

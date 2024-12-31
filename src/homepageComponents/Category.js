@@ -66,8 +66,8 @@ const CategorySlider = () => {
         <div className="category-slider">
             <Slider {...settings}>
                 {categories.map((category) => (
-                    <div key={category.id} className="category-item">
-                        <button className="category-button" onClick={() => handleCategoryClick(category.link)}>
+                    <div key={category.id} className="category-item" onClick={() => handleCategoryClick(category.link)}>
+                        <button className="category-button">
                             <img src={category.icon} alt={category.name} />
                         </button>
                         <div className="category-name">{category.name}</div>
