@@ -1,11 +1,11 @@
 import './App.css';
-import Navbar from './components/Navbar'
+import Navbar from './homepageComponents/Navbar'
 // import Home from './components/Home'
-import Banner from './components/Banner';
-import CategorySlider from './components/Category';
-import Collection from './components/Collection';
-import ProductCarousel from './components/ProductCarousel';
-
+import Banner from './homepageComponents/Banner';
+import CategorySlider from './homepageComponents/Category';
+import Collection from './homepageComponents/Collection';
+import ProductCarousel from './homepageComponents/TopProduct';
+import MemberAndStoreCredit from './homepageComponents/MemberAndStoreCredit';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
         <CategorySlider />
         <Collection />
         <ProductCarousel />
+        <MemberAndStoreCredit />
       </div>
     </div>
   );

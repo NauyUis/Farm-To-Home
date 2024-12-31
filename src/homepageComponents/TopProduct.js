@@ -65,10 +65,12 @@ const ProductCarousel = () => {
         { id: 16, name: 'Product 5', price: '20.00', image: 'https://farmtohome.com.my/image/farmtohome/image/cache/data/all_product_images/product-790/png_20230118_195612_0000-420x420.png', quantity: 1 },
     ];
 
+    const title = "Top Product"
+
 
     return (
         <div className="product-container">
-            <h2>Product Carousel</h2>
+            <h2>{title}</h2>
             <Slider ref={sliderRef} {...settings} className="product-slick-slider">
                 {products.map((product) => (
                     <div key={product.id} className="product-item">

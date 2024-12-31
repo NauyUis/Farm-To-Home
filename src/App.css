@@ -4,6 +4,7 @@
 @import './style/category.css';
 @import './style/collection.css';
 @import './style/productSlider.css';
+@import './style/MemberAndStoreCredit.css';
 
 body {
     height: 10000px;

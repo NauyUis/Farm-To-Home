@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 // Image links array
 const images = [
-  'https://farmtohome.com.my/image/farmtohome/image/cache/data/FTHD%20Main%20Page%201-700x431.png',
+    'https://farmtohome.com.my/image/farmtohome/image/cache/data/FTHD%20Main%20Page%201-700x431.png',
     'https://farmtohome.com.my/image/farmtohome/image/cache/data/Copy%20of%20Photo%203%20(1)-1024x577.jpg',
     'https://farmtohome.com.my/image/farmtohome/image/cache/data/FTHD%20Main%20Page%201-700x431.png',
     'https://farmtohome.com.my/image/farmtohome/image/cache/data/Copy%20of%20Photo%203%20(1)-1024x577.jpg',

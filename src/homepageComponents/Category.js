@@ -9,7 +9,7 @@ const categories = [
     { id: 2, icon: "https://farmtohome.com.my/image/farmtohome/image/cache/data/Screenshot_2021_0219_001927-400x400.jpg", name: "Monthly Package", link: "/clothing" },
     { id: 3, icon: "https://farmtohome.com.my/image/farmtohome/image/cache/data/png_20230327_160013_0000-400x400.png", name: "Food", link: "/food" },
     { id: 4, icon: "https://farmtohome.com.my/image/farmtohome/image/cache/data/merry-christmas-wallpaper-design_79603-2129-400x400.jpg", name: "Christmas Special", link: "/mobile" },
-    { id: 5, icon: "https://farmtohome.com.my/image/farmtohome/image/cache/data/0001-1724203431_20210523_001739_0000-400x400.png", name: "Laptops", link: "/laptops" },
+    { id: 5, icon: "https://farmtohome.com.my/image/farmtohome/image/cache/data/0001-1724203431_20210523_001739_0000-400x400.png", name: "Voucher", link: "/laptops" },
     { id: 6, icon: "https://farmtohome.com.my/image/farmtohome/image/cache/data/Home%20page/4-640x400.png", name: "Books", link: "/books" },
     { id: 7, icon: "https://farmtohome.com.my/image/farmtohome/image/cache/data/Home%20page/4-640x400.png", name: "Gaming", link: "/gaming" },
     { id: 8, icon: "https://farmtohome.com.my/image/farmtohome/image/cache/data/Home%20page/4-640x400.png", name: "Headphones", link: "/headphones" },
