@@ -18,11 +18,11 @@ const images = [
 const MemberAndStoreCredit = () => {
     return (
         <div className="FTH-StoreCredit-container">
-            <h2>Become a member or purchase some store credits.</h2>
-            <p>Members have special discounts, while purchasing store credits give you more for less.</p>
-            <div className='FTH-StoreCredit-item'>
+            <h2 className='FTH-heading'>Become a member or purchase some store credits.</h2>
+            <p className='FTH-des'>Members have special discounts, while purchasing store credits give you more for less.</p>
+            <div className='FTH-StoreCredit'>
                 {images.map((image, index) => (
-                    <div className="FTH-StoreCredit" key={index}>
+                    <div className="FTH-StoreCredit-item" key={index}>
                         <a href={image.link}>
                             <img src={image.src} alt={`Farm ${index + 1}`} />
                         </a>

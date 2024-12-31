@@ -4,24 +4,25 @@
     justify-content: center;
     align-items: center;
     padding: 0px;
-
+    margin-top: 1%;
+    border: 2px solid red;
 }
 
-.FTH-StoreCredit-container>h2 {
+.FTH-heading {
     font-size: clamp(8px, 2vw, 30px);
     text-align: center;
     margin: 0;
     text-transform: uppercase;
 }
 
-.FTH-StoreCredit-container>p {
-    font-size: clamp(8px, 1.5vw, 30px);
+.FTH-des {
+    font-size: clamp(8px, 1.5vw, 24px);
     text-align: center;
     margin: 0.5% 0 0px 0;
 }
 
 
-.FTH-StoreCredit-item {
+.FTH-StoreCredit {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -31,7 +32,7 @@
     padding: 0 1%;
 }
 
-.FTH-StoreCredit {
+.FTH-StoreCredit-item {
     width: 50%;
     height: 100%;
     display: flex;
@@ -44,30 +45,30 @@
     align-items: center;
 }
 
-.FTH-StoreCredit>a {
+.FTH-StoreCredit-item>a {
     overflow: hidden;
 }
 
-.FTH-StoreCredit img {
+.FTH-StoreCredit-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
 
-.FTH-StoreCredit:hover img {
+.FTH-StoreCredit-item:hover img {
     transform: scale(1.1);
 }
 
-.FTH-StoreCredit>h3 {
+.FTH-StoreCredit-item>h3 {
     font-size: clamp(8px, 1.5vw, 30px);
     margin: 0;
     text-align: center;
 }
 
-.FTH-StoreCredit>p {
-    height: 15px;
-    font-size: clamp(8px, 1vw, 30px);
+.FTH-StoreCredit-item>p {
+    height: 25px;
+    font-size: clamp(8px, 1.3vw, 24px);
     text-align: center;
 }
 
@@ -82,16 +83,19 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border: 2px solid blue;
 }
 
 .small-banner h1 {
-    font-size: 1.8rem;
+    font-size: clamp(12px, 2vw, 36px);
     font-weight: bold;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .small-banner p {
-    font-size: 1rem;
+    font-size: clamp(10px, 1.5vw, 32px);
+    text-align: center;
     margin-bottom: 1rem;
 }
 
@@ -100,23 +104,54 @@
     color: #000;
     border: 2px solid #38b000;
     padding: 0.5rem 1.5rem;
-    border-radius: 25px;
+    border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
 }
 
+.login-register-btn:hover {
+    background-color:green;
+}
+
 @media (max-width: 995px) {
-    .FTH-StoreCredit-container>h2 {
+    .FTH-heading {
         font-size: clamp(10px, 2vw, 20px);
     }
 
-    .FTH-StoreCredit-container>p {
+    .FTH-des {
         font-size: clamp(10px, 2vw, 20px);
+    }
+
+    .FTH-StoreCredit-item>h3 {
+        font-size: clamp(10px, 2vw, 20px);
+    }
+    
+    .FTH-StoreCredit-item>p {
+        font-size: clamp(10px, 2vw, 16px);
+    }
+
+    .FTH-StoreCredit-item>p {
+        height: 3.5vw;
     }
 }
 
-@media (max-width: 343px) {
-    .FTH-StoreCredit>p {
-        height: 25px;
+@media (max-width: 480px) {
+    .FTH-heading {
+        font-size: clamp(10px, 2vw, 20px);
+    }
+
+    .FTH-des {
+        font-size: clamp(8px, 2vw, 20px);
+    }
+
+    .FTH-StoreCredit-item>p {
+        height: 20px;
+    }
+}
+
+
+@media (max-width: 415px) {
+    .FTH-StoreCredit-item>p {
+        height: 35px;
     }
 }

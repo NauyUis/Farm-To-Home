@@ -40,7 +40,7 @@ const ProductCarousel = () => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 4.1,
+                    slidesToShow: 3.5,
                 },
             },
         ],
