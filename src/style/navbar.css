@@ -10,6 +10,10 @@
   }
 }
 
+.navbar-container{
+  width: 100%;
+}
+
 
 .logo-container {
   margin-left: 5%;
@@ -47,10 +51,10 @@
 }
 
 .social-icons {
-  size: 1px;
   display: flex;
-  gap: 15px;
-  padding-right: 2vw;
+  gap: 10px;
+  padding: 0 0 2vw 0 !important;
+  margin: 27px 3vw 0 0 !important;
 }
 
 .social-icons a svg {
@@ -66,7 +70,6 @@
 
 .social-icons a {
   color: white;
-  margin-left: 10px;
   text-decoration: none;
 }
 
@@ -473,11 +476,6 @@
 
   .contact-info {
     font-size: clamp(8px, 2vw, 20px);
-  }
-
-  .social-icons {
-    margin-top: -1vw;
-    gap: 2vw;
   }
 
   .social-icons a svg {

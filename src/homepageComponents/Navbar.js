@@ -35,7 +35,7 @@ const Navbar = () => {
 
 
     return (
-        <header>
+        <header className='navbar-container'>
             <div className="top-bar">
                 <div className="email-phone">
                     <a href="mailto:info@domain.com" className="contact-info">
