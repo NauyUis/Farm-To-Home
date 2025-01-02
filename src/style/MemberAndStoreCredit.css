@@ -5,7 +5,6 @@
     align-items: center;
     padding: 0px;
     margin-top: 1%;
-    border: 2px solid red;
 }
 
 .FTH-heading {
@@ -83,7 +82,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: 2px solid blue;
 }
 
 .small-banner h1 {

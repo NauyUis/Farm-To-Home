@@ -6,6 +6,7 @@ import CategorySlider from './homepageComponents/Category';
 import Collection from './homepageComponents/Collection';
 import ProductCarousel from './homepageComponents/TopProduct';
 import MemberAndStoreCredit from './homepageComponents/MemberAndStoreCredit';
+import Footer from './homepageComponents/footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Collection />
         <ProductCarousel />
         <MemberAndStoreCredit />
+        <Footer />
       </div>
     </div>
   );

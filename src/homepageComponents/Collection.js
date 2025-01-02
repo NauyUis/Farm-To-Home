@@ -13,6 +13,7 @@ const images = [
     src: 'https://farmtohome.com.my/image/farmtohome/image/cache/data/Home%20page/3%20b-640x400.png',
     link: '/page3',
   },
+  
 ];
 
 const Collection = () => {
