@@ -73,6 +73,7 @@
 
 .small-banner {
     width: 100%;
+    margin: 0;
     padding: 5% 0;
     display: flex;
     flex-direction: column;

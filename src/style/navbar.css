@@ -472,7 +472,7 @@
   }
 
   .contact-info {
-    font-size: 2vw
+    font-size: clamp(8px, 2vw, 20px);
   }
 
   .social-icons {
